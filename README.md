@@ -5,6 +5,19 @@
 接口见 BRIDGE.md，状态见 STATUS.md。
 ---
 
+## 下载安装包
+
+所有版本在 **[Releases](https://github.com/Tiontec/lucida-watch-android/releases)**。
+
+| 版本 | 主要内容 |
+|---|---|
+| v11.1.5 | 手表版 Android 壳，Camera2 双摄 + OpenGL 合成 |
+
+每个版本包含：
+
+- `澄影手表-android-<版本>.apk` —— 已用固定密钥签名，可直接安装
+- `Lucida-watch-<版本>-web.html` —— 该版本内置的网页源文件
+
 ## 协议与作者
 
 本项目由 **雾峥奕** 创作，以《澄影非商业开源许可协议 1.0》开源。
