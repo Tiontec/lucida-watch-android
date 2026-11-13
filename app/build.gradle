@@ -1,0 +1,25 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.lucida.watch'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.lucida.watch'
+        minSdk 24
+        targetSdk 34
+        versionCode 111500
+        versionName '11.1.5'
+    }
+    buildFeatures { buildConfig true }
+    signingConfigs {
+        // 固定签名：每次打出的包签名一致，可以直接覆盖安装
+        lucida {
+            storeFile file('lucida.keystore'); storePassword 'lucida-watch'
+            keyAlias 'lucida'; keyPassword 'lucida-watch'
+        }
+    }
+    buildTypes {
+        debug { signingConfig signingConfigs.lucida }
+        release { signingConfig signingConfigs.lucida; minifyEnabled false }
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+}
